@@ -3,7 +3,7 @@ using System;
 
 namespace VendorOrderTracker.Models
 {
-  public Class Order
+  public class Order
   {
     public string Title { get; set; }
     public string Description { get; set; }
