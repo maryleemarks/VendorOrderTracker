@@ -47,5 +47,18 @@ namespace VendorOrderTracker.Tests
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsVendors_VendorsList()
+    {
+      string name1 = "Allen's Cafe";
+      string name2 = "Susan's Coffee House";
+      string description1 = "cafe on 122nd and Halsey";
+      string description2 = "coffee shop on 122nd and Glisan";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
