@@ -53,5 +53,29 @@ namespace VendorOrderTracker.Tests
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
+    [TestMethod]
+    public void GetDate_ReturnsDateDate()
+    {
+      string title = "Allen Reg";
+      string description = "10 loaves";
+      int price = 35;
+      DateTime date = DateTime.Today;
+      Order newOrder = new Order(title, description, price, date);
+      DateTime result = newOrder.Date;
+      Assert.AreEqual(date, result);
+    }
+    [TestMethod]
+    public void SetTitle_SetTitleString()
+    {
+      string title = "Allen Reg";
+      string description = "10 loaves";
+      int price = 35;
+      DateTime date = DateTime.Today;
+      Order newOrder = new Order(title, description, price, date);
+      string updatedTitle = "Allen's Cafe Standing Order";
+      newOrder.Title = updatedTitle;
+      string result = newOrder.Title;
+      Assert.AreEqual(updatedTitle, result);
+    }
   }
 }
