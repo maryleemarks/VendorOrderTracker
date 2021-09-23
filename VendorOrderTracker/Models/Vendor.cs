@@ -12,11 +12,16 @@ namespace VendorOrderTracker.Models
     {
       Name = name;
       Description = vendorDescription;
+      _instances.Add(this);
     }
 
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
     }
 
 

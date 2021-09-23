@@ -25,7 +25,7 @@ namespace VendorOrderTracker.Tests
     {
       string name = "Allen's Cafe";
       string description = "cafe on 122nd and Halsey";
-      Vendor newVendow = new Vendor(name, description);
+      Vendor newVendor = new Vendor(name, description);
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
