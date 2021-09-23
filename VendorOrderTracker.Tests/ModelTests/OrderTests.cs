@@ -84,5 +84,22 @@ namespace VendorOrderTracker.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsOrder_OrderList()
+    {
+      string title1 = "Allen Reg";
+      string title2 = "Allen's Cafe Standing Order";
+      string description1 = "10 loaves";
+      string description2 = "10 pastries";
+      int price1 = 35;
+      int price2 = 17;
+      DateTime date1 = DateTime.Today;
+      DateTime date2 = DateTime.Today;
+      Order newOrder1 = new Order(title1, description1, price1, date1);
+      Order newOrder2 = new Order(title2, description2, price2, date2);
+      List<Order> newList = new List<Order> {newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
